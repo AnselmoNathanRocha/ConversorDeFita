@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="refresh" content="">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Metragem</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <label for="peso">Peso da Bobina: </label>
+    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" placeholder="Peso" id="pesoBobina">
+
+    <label for="fita">Tamanho da Bobina: </label>
+    <select id="tamanhoFita" name="fita">
+        <option value="" disabled selected>Escolha o Tamanho</option>
+        <option value="300">300mm</option>
+        <option value="400">400mm</option>
+    </select>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <textarea id="res"></textarea>
+
+    <button onclick="resetar()">Reset</button>
+
+</body>
+</html>

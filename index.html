@@ -6,10 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo de Metragem</title>
+    <link rel="shortcut icon" href="logoCCLsimbol.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 <body>
+
+    <img src="logoDESIGN.png" alt="Logo CCL Design">
     
     <label for="peso">Peso da Bobina: </label>
     <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" placeholder="Peso" id="pesoBobina">
@@ -21,11 +24,21 @@
         <option value="400">400mm</option>
     </select>
 
+    <label for="tipoFita">Tipo de Fita:</label>
+    <div name="tipoFita" id="tipoFita">
+        <label for="polyester"><input type="radio" name="tipoFita" value="poly" id="polyester" class="radio" checked>Polyester</label>
+        <label for="espumada"><input type="radio" name="tipoFita" value="espu" id="espumada" class="radio">Espumada</label>
+    </div> 
+
     <button onclick="calcular()">Calcular</button>
 
-    <textarea id="res"></textarea>
+    <textarea id="res" disabled rows="2" cols="22"></textarea>
 
     <button onclick="resetar()">Reset</button>
 
+    <div class="push"></div>
+</div>
+
+    <footer>by <a href="https://github.com/AnselmoNathanRocha">NathanRocha</a></footer>
 </body>
 </html>

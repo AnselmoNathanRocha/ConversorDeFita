@@ -39,6 +39,7 @@ body, button {
 img {
     width: 300px;
     margin-bottom: 20%;
+    margin-top: 20px;
 }
 
 select, input {

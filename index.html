@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta http-equiv="refresh" content="">
-
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cálculo de Metragem</title>
-    <link rel="shortcut icon" href="logoCCLsimbol.ico" type="image/x-icon">
+    <title>Conversor de Fita</title>
+    <link rel="shortcut icon" href="img/logoCCLsimbol.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+
 </head>
 <body>
-    
-    <label for="peso">Peso da Bobina(kg): </label>
-    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" placeholder="Peso" id="pesoBobina">
+    <div class="caixa">
 
-    <label for="fita">Tamanho da Bobina(mm): </label>
-    <select id="tamanhoFita" name="fita">
-        <option value="" disabled selected>Escolha o Tamanho</option>
-        <option value="300">300mm</option>
-        <option value="400">400mm</option>
-    </select>
+            <div class="borda">
+                <div class="legenda"><strong>Metragem de Fita</strong></div>
+                <br>
+                <div class="inputBox">
+                    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" required id="peso" class="inputUser">
+                    <label for="peso" class="labelInput">Peso da Bobina</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <select id="tamanho" class="inputUser" name="fita">
+                        <option value="" disabled selected>Escolha o Tamanho</option>
+                        <option value="300">300mm</option>
+                        <option value="400">400mm</option>
+                    </select>
+                    <label for="tamanho" class="labelInput">Tamanho da Bobina</label>
+                </div>
+                
+                <h1>Tipo de Fita:</h1>
+                <span class="bordaInput">
+                    <input type="radio" id="polyester" name="tipoFita" value="poly" checked>
+                </span>
+                <label for="polyester">Polyester</label>
+                <br>    
+                <input type="radio" id="espumada" name="tipoFita" value="espu" >
+                <label for="espumada">Espumada</label>
+                
+                <br><br>
+                <div class="inputBox">
+                    <textarea cols="30" rows="2" id="res" class="inputUser" disabled></textarea>
+                    <label for="res" class="labelInput"></label>
+                </div>
+                <br><br>
+                <div class="botoes">
+                    <button onclick="calcular()">Calcular</button>
+                    <button onclick="resetar()">Resetar</button>
+                </div>
+            </div>
+    </div>
 
-    <label for="tipoFita">Tipo de Fita:</label>
-    <div name="tipoFita" id="tipoFita">
-        <label for="polyester"><input type="radio" name="tipoFita" value="poly" id="polyester" class="radio" checked>Polyester</label>
-        <label for="espumada"><input type="radio" name="tipoFita" value="espu" id="espumada" class="radio">Espumada</label>
-    </div> 
-
-    <button onclick="calcular()">Calcular</button>
-
-    <textarea id="res" disabled rows="2" cols="22"></textarea>
-
-    <button onclick="resetar()">Reset</button>
-
-    <div class="push"></div>
-</div>
-
-    <footer>by <a href="https://anselmonathanrocha.github.io/MyProfile/" target="_blank">NathanRocha</a></footer>
+    <script src="script.js"></script>
 </body>
 </html>

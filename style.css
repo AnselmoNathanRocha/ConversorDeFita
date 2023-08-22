@@ -39,13 +39,7 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-.labelRadio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.inputUser {
+.estiloInput {
     background: none;
     border: none;
     border-bottom: 1px solid white;
@@ -56,7 +50,7 @@ input[type=number]::-webkit-inner-spin-button {
     letter-spacing: 2px;
 }
 
-.labelInput {
+.estiloLabel {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -71,8 +65,8 @@ option {
     border-radius: 3px;
 }   
 
-.inputUser:focus ~ .labelInput,
-.inputUser:valid ~ .labelInput {
+.estiloInput:focus ~ .estiloLabel,
+.estiloInput:valid ~ .estiloLabel {
     top: -20px;
     font-size: 14px;
     color: #8D8FA8;

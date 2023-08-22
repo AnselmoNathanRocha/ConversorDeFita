@@ -16,23 +16,21 @@
                 <div class="legenda"><strong>Metragem de Fita</strong></div>
                 <br>
                 <div class="inputBox">
-                    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" required id="peso" class="inputUser">
-                    <label for="peso" class="labelInput">Peso da Bobina</label>
+                    <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" required id="peso" class="estiloInput">
+                    <label for="peso" class="estiloLabel">Peso da Bobina</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <select id="tamanho" class="inputUser" name="fita">
+                    <select id="tamanho" class="estiloInput" name="fita">
                         <option value="" disabled selected>Escolha o Tamanho</option>
                         <option value="300">300mm</option>
                         <option value="400">400mm</option>
                     </select>
-                    <label for="tamanho" class="labelInput">Tamanho da Bobina</label>
+                    <label for="tamanho" class="estiloLabel">Tamanho da Bobina</label>
                 </div>
                 
                 <h1>Tipo de Fita:</h1>
-                <span class="bordaInput">
-                    <input type="radio" id="polyester" name="tipoFita" value="poly" checked>
-                </span>
+                <input type="radio" id="polyester" name="tipoFita" value="poly" checked>
                 <label for="polyester">Polyester</label>
                 <br>    
                 <input type="radio" id="espumada" name="tipoFita" value="espu" >
@@ -40,8 +38,8 @@
                 
                 <br><br>
                 <div class="inputBox">
-                    <textarea cols="30" rows="2" id="res" class="inputUser" disabled></textarea>
-                    <label for="res" class="labelInput"></label>
+                    <textarea cols="30" rows="2" id="res" class="estiloInput" disabled></textarea>
+                    <label for="res" class="estiloLabel"></label>
                 </div>
                 <br><br>
                 <div class="botoes">
